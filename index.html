@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio web</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<header class="header container">
+    <nav class="nav">
+        <a href="#personal"><p>Sobre mi</p></a>
+        <a href="#proyectos"><p>Proyectos</p></a>
+        <a href="#contacto"><p>Contacto</p></a>
+    </nav>
+</header>
+<body>
+    <h1 class="title">Renzo Martín Bisso. <span class="resaltado">Desarrollador Backend.</span></h1>
+    <section class="info">
+        <h2><a href="https://1drv.ms/w/c/a9eb36e435f437f6/ETWpdVdcEVtMq9gEYFzYXhUBf1ZiMzjheULb1yCenjuWbA?e=PmKxgQ"><button class="btn">Mi CV</button></a></h2>
+        <br>
+        <br>
+        <br>
+        <a href="https://github.com/RenzoBisso"><img src="./media/GitHub.svg" alt="github"></a>
+        <a href="https://www.linkedin.com/in/renzo-mart%C3%ADn-bisso/"><img class="linkedin" src="./media/linkedin.svg" alt="Logo de linkedin"></a>
+    </section>
+
+    <section id="personal" class="personal">
+        <div 
+            data-aos="fade-left"
+            data-aos-offset="500"
+            data-aos-duration="1500">
+            <p>
+                <span class="title-secundario">Sobre mi</span><br><br>
+                    Estudiante de la Licenciatura en Sistemas de Información en la Universidad Nacional de Luján (UNLu). 
+                    Soy una persona proactiva, siempre en busca de ampliar mis conocimientos de forma autodidacta. 
+                    Me interesa especialmente el desarrollo BackEnd, ya que disfruto más trabajar en la lógica y estructura del software que en su parte visual.
+            </p>
+            <img src="./media/personal.webp" alt="Foto de Renzo">
+        </div>
+    </section>
+    <section class="tecnologias">
+    <div 
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
+        <p class="title-secundario">Tecnologias</p>
+        <img src="./media/CSharp.svg" alt="C#">
+        <img src="./media/HTML5.svg" alt="html">
+        <img src="./media/CSS3.svg" alt="css">
+        <img src="./media/Bootstrap.svg" alt="bootstrap">
+        <img src="./media/NET core.svg" alt=".net">
+        <img src="./media/Git.svg" alt="git">
+        <img src="./media/GitHub.svg" alt="github">
+        <img src="./media/SQL Developer.svg" alt="sql">
+        
+    </div>
+
+    </section>
+    <br><br><br><br><br><br>
+    <section id="habilidades">
+        <div class="columna" data-aos="fade-right"
+     data-aos-duration="1000"
+     data-aos-easing="ease-in-sine">
+            <h2 class="title-secundario">Habilidades técnicas</h2>
+                <ul>
+                    <li>Programación orientada a objetos (POO)</li>
+                    <li>Estructuras de datos</li>
+                    <li>Desarrollo BackEnd</li>
+                    <li>Manejo de bases de datos</li>
+                    <li>Control de versiones</li>
+                    <li>Conocimientos en lenguajes de programación como Java, C#, C</li>
+                </ul>
+        </div>
+
+        <div class="columna" data-aos="fade-left"
+     data-aos-duration="1000"
+     data-aos-easing="ease-in-sine">
+            <h2 class="title-secundario">Habilidades blandas</h2>
+                <ul>
+                        <li>Comunicación</li>
+                        <li>Proactividad</li>
+                        <li>Pensamiento crítico</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Adaptabilidad</li>
+                        <li>Empatía</li>
+                        <li>Capacidad de aprendizaje</li>
+                </ul>
+        </div>
+    </section>
+    <br><br><br><br>
+<section id="proyectos" class="proyectos">
+    <h2 class="title-secundario">Proyectos</h2>
+    <div class="proyectos-container">
+        <div class="proyecto" data-aos="zoom-out-up" data-aos-duration="1000">
+            <img src="./media/gestion-de-articulos-desktop.png" alt="Imagen de proyecto">
+            <h2 class="title-secundario">Gestion de articulos desktop</h2>
+            <p>
+                C#,.Net Framework,WinForm,SQL,SQLMicrosftServer <br> 
+                <a href="https://github.com/RenzoBisso/GestionDeArticulos">Link del repositorio</a>
+            </p>
+        </div>
+        <div class="proyecto" data-aos="zoom-out-up" data-aos-duration="1000">
+            <img src="./media/gestion-de-articulos-web.png" alt="Imagen de proyecto">
+            <h2 class="title-secundario">Gestion de articulos web</h2>
+            <p>C#,.Net Framework,Bootstrap,SQL,SQLMicrosftServer,HTML,CSS,ASP.NET <br>
+                <a href="https://github.com/RenzoBisso/GestionDeArticulos">Link del repositorio</a>
+            </p>
+        </div>
+    </div>
+</section>
+<footer id="contacto" class="contacto">
+    <h2 class="title-secundario">Contactame</h2>
+    <form id="emailForm">
+        <input type="text" id="subject" placeholder="Asunto" required><br><br>
+        <textarea id="body" placeholder="Mensaje" required></textarea><br>
+        <button class="btn" type="submit">Enviar Email</button>
+    </form>
+</footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <script src="./js/send_email.js"></script>
+</body>
+</html>

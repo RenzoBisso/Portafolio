@@ -1,0 +1,276 @@
+
+:root {
+  --color-background: #0e0f1a;      /* Fondo principal (azul oscuro casi negro) */
+  --color-primary-red: #ff4d4d;     /* Rojo destacado (nombre, enlaces, botones) */
+  --color-text-main: #ffffff;       /* Blanco (texto principal) */
+  --color-text-secondary: #c0c0c0;  /* Gris claro (textos secundarios) */
+  --color-panel: rgba(30, 31, 43, 0.7); /* 70% de opacidad */ 
+}
+
+
+body{
+    background-image:url("../media/imagenFondo.png");
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+body, p, nav {
+  font-family: 'Fira Code', monospace;
+}
+
+.container{
+  display: flex;
+  
+}
+
+.nav{
+  display: flex;    
+  gap: 20px;  
+  margin-right: 5%;
+}
+
+
+.nav a{
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.nav a:hover{
+  color:var(--color-text-main);
+}
+
+.header{
+  
+  justify-content: end; 
+  color: var(--color-text-secondary);
+  background-color: var(--color-panel);
+}
+.title{
+  margin-top: 10%;
+  color:var(--color-text-main);
+  text-align: center;
+  justify-content: center;     
+  align-items: center;         
+}
+.resaltado{
+  color:var(--color-primary-red);
+  transition: font-size 0.3s ease;
+}
+.resaltado:hover{
+  font-size: 110%;
+}
+
+.info{
+  padding-top: 3%;
+  text-align: center;
+  justify-content: center;     
+  align-items: center;    
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid var(--color-primary-red);   
+  padding:0% 1%;   
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  color: var(--color-primary-red);   
+}
+
+.btn a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: var(--color-primary-red);
+  color:var(--color-background);
+}
+
+.info img {
+  margin-right: 2%;
+  margin-left: 2%;
+  width: 2%;
+  height: 2%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.info img:hover {
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.personal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  margin-top:10%;
+  box-sizing: border-box;
+}
+
+.personal div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.personal p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0;
+  color:var(--color-text-main);
+}
+
+.personal img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+.title-secundario{
+  font-size: 150%;
+  font-weight: 900;
+  color:var(--color-primary-red);
+}
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;         /* ✅ permite que los elementos bajen si no entran */
+  gap: 20px;               /* espacio entre elementos */
+  padding: 20px;
+  text-align: center;
+}
+
+.tecnologias p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tecnologias i {
+  color: var(--color-text-secondary);
+  font-size: 300%;
+}
+
+.tecnologias img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Habilidades */
+#habilidades {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--color-text-main);
+  flex-wrap: wrap;       /* ✅ para evitar que se superpongan en pantallas chicas */
+}
+
+.columna {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+h2 {
+  padding-bottom: 5px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* este espacio puedes reducirlo */
+}
+.proyectos h2{
+  text-align: center;
+}
+.proyecto {
+    flex: 0 1 calc(50% - 200px);
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.proyecto p{
+  width: 100%;
+  color:var(--color-text-secondary);
+  text-align: center;
+}
+.proyecto a{
+  text-decoration: none;
+  color: var(--color-primary-red);
+}
+.proyecto img{
+  width: 40%;
+}
+.contacto form{
+  text-align: center  ;
+}
+.contacto h2{
+  text-align: center;
+}
+#emailForm {
+  max-width: 400px;
+  margin: auto;
+}
+
+#emailForm input, #emailForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .personal div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .personal p,
+  .personal img {
+    width: 100%;
+  }
+
+  .tecnologias {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .tecnologias img,
+  .tecnologias i {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
+
+  #habilidades {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .columna {
+    width: 100%;
+  }
+}
