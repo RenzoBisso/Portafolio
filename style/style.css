@@ -10,6 +10,7 @@
 
 body{
     background-image:url("../media/imagenFondo.png");
+    margin: 0%;
 }
 
 h1, h2, h3 {
@@ -92,7 +93,10 @@ body, p, nav {
   background-color: var(--color-primary-red);
   color:var(--color-background);
 }
-
+.info{
+    padding-bottom: 3%; /* nuevo */
+  margin-bottom: 40px; /* nuevo: evita que se solape con lo siguiente */
+}
 .info img {
   margin-right: 2%;
   margin-left: 2%;
@@ -110,9 +114,9 @@ body, p, nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
-  margin-top:10%;
+  padding: 40px 20px; 
   box-sizing: border-box;
+  flex-wrap: wrap; 
 }
 
 .personal div {
@@ -132,7 +136,8 @@ body, p, nav {
 }
 
 .personal img {
-  width: 50%;
+  max-width: 300px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -143,11 +148,12 @@ body, p, nav {
 }
 
 .tecnologias {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;         /* ✅ permite que los elementos bajen si no entran */
-  gap: 20px;               /* espacio entre elementos */
+  flex-wrap: wrap;         
+  gap: 20px;              
   padding: 20px;
   text-align: center;
 }
@@ -169,7 +175,6 @@ body, p, nav {
   object-fit: contain;
 }
 
-/* Habilidades */
 #habilidades {
   display: flex;
   justify-content: center;
@@ -240,6 +245,27 @@ ul {
 }
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .personal img {
+  max-width: 80%;
+}
+
   .personal div {
     flex-direction: column;
     align-items: center;
