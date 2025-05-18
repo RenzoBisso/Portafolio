@@ -178,7 +178,7 @@ body, p, nav {
   margin: 0 auto;
   padding: 20px;
   color: var(--color-text-main);
-  flex-wrap: wrap;       /* ✅ para evitar que se superpongan en pantallas chicas */
+  flex-wrap: wrap;       
 }
 
 .columna {
@@ -198,7 +198,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* este espacio puedes reducirlo */
+  gap: 20px; 
 }
 .proyectos h2{
   text-align: center;
@@ -251,6 +251,10 @@ ul {
     width: 100%;
   }
 
+  .info img{
+    width: 40px;
+    height: 40px;
+  }
   .tecnologias {
     flex-direction: column;
     align-items: center;
